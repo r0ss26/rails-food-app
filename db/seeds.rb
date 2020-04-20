@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+for i in 0..20
+  FoodItem.create(name: Faker::Food.dish, calories: Faker::Number.decimal(l_digits: 4, r_digits: 2))
+end
