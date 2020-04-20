@@ -8,5 +8,5 @@
 
 
 for i in 0..20
-  FoodItem.create(name: Faker::Food.dish, calories: Faker::Number.decimal(l_digits: 4, r_digits: 2))
+  FoodItem.create(name: Faker::Food.dish, calories: Faker::Number.decimal(l_digits: 3, r_digits: 2))
 end

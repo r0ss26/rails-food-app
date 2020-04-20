@@ -1,0 +1,7 @@
+<h1>Foods</h1>
+<button><%= link_to "New Food", new_food_path %></button>
+<ul>
+  <% for food in @foods %>
+    <li><%= link_to food.id, food_path(food.id) %>: <%= food.name %> - <%= food.calories %> Calories <button><%= link_to "X", food_path(food.id), method: :delete %></button></li>
+  <% end %>
+</ul>
