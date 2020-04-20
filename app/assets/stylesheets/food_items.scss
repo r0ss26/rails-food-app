@@ -10,10 +10,13 @@ input[type="submit"], button {
   margin: 10px;
 }
 
-a {
-  text-decoration: none;
-  color: black;
+button {
+  a {
+    text-decoration: none;
+    color: black;
+  }
 }
+
 
 a:visited {
   text-decoration: none;
