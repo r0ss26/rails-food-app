@@ -1,0 +1,9 @@
+<form action="<%= food_path %>" method="POST">
+  <input name="_method" type="hidden" value="PUT">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="food">Food</label>
+  <input type="text" name="food" id="food" value="<%= @food.name %>">
+  <label for="calories">Calories</label>
+  <input type="number" name="calories" id="calories" step="0.01" value="<%= @food.calories %>">
+  <input type="submit" value="Submit">
+</form>

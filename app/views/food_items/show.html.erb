@@ -1,2 +1,4 @@
 <h1><%= @food.id %>: <%= @food.name %></h1>
 <h2><%= @food.calories %> Calories</h2>
+
+<%= link_to "Edit", edit_food_path(@food.id) %>

@@ -8,7 +8,6 @@ class FoodItemsController < ApplicationController
   end
 
   def new
-
   end
 
   def create
@@ -19,5 +18,18 @@ class FoodItemsController < ApplicationController
   def destroy
     FoodItem.find(params[:id]).destroy
     redirect_to foods_path
+  end
+
+  def edit
+    @food = FoodItem.find(params[:id])
+  end
+
+  def update
+    @food = FoodItem.find(params[:id])
+    @food.name = params[:food]
+    @food.calories = params[:calories]
+    @food.save
+
+    redirect_to food_path(@food.id)
   end
 end
